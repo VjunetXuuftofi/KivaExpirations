@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Loan</title>
+    <link rel='stylesheet' type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container-fluid text-center">
+    <h1>
+        Loan Expiration Predictions
+    </h1>
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <p class="text-justify">
+                Welcome to the Loan Expiration Predictor! This website allows you to
+                get the approximate risk any loan on Kiva has of expiring. It ranks
+                loans on a scale from 1-7, 1 being there is only a 1% chance of
+                expiring, 7 being over 75% chance of expiration. The model is
+                based on data stretching from January 2015 to August 2016.
+                The model is based on 9 key indicators: The amount of the
+                loan, the day of the month the loan is slated to expire, the
+                loan repayment term, the percentage of borrowers who are
+                female, the number of borrowers, the sector of the loan, the
+                country the loan is in, the Field Partner that disburses the
+                loan, and the activity of the loan. <br>
+                Please note that the predictor does not as of now take into account
+                the loan's current funding trajectory. If there is a kind of loan that
+                would usually expire, but is 99% funded with 20 days left, the
+                calculator will still say it has a high risk of expiration. <br>
+                The calculator is meant to be used as a tool to initially diagnose
+                loans that might expire. It is not very useful when a loan is about
+                to fund, or about to expire. <br>
+                The predictor may not be very good with loans
+                from Field Partners or countries that have been added to Kiva
+                after August 2016. The predictor does not support Kiva US.
+            </p>
+        </div>
+    </div>
+
+    Link to loan: <input type="url" id="link" placeholder="www.kiva.org/lend/1023243">
+    <button id='submit'>Submit</button>
+</div>
+<script src="/static/choice_js.js"></script>
+</body>
+</html>
